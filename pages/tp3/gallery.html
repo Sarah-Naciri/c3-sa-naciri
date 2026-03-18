@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerie de nos réalisations.">
+  <title>Galerie - Bacodiv</title>
+  <link rel="stylesheet" href="../../css/tp3.css">
+</head>
+
+<body class="page-vitrine">
+
+  <a href="#contenu-principal" class="lien-saut-contenu">Aller au contenu</a>
+
+
+  <header class="entete-site">
+    <div class="conteneur">
+
+      <div class="logo-site">
+        <h1>Bacodiv</h1>
+      </div>
+
+
+      <nav class="navigation-principale" aria-label="Navigation principale">
+        <ul class="menu-horizontal">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html" class="lien-actif" aria-current="page">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Contenu principal de la page -->
+  <main id="contenu-principal">
+    <section class="section-services">
+      <div class="conteneur">
+        <h2 class="titre-section text-center">Notre Galerie &amp; Présentation</h2>
+
+        <!-- Section vidéo de présentation -->
+        <div class="galerie-entete">
+          <h3>Vidéo de présentation</h3>
+          <p class="galerie-description">Suivi chronologique d'un de nos gros chantiers.</p>
+
+          <!-- autoplay muted pour démarrer la video mais sans son et controls = affiche les boutons lecture/pause/volume -->
+          <!-- loop est pour recommencer en boucle -->
+          <video class="video-presentation" controls autoplay muted loop>
+            <source src="../../images/construction.mp4" type="video/mp4">
+
+          </video>
+        </div>
+
+        <!-- Galerie de photos -->
+        <h3 class="galerie-titre-photos">Photos récentes</h3>
+
+        <!-- Les grilles d'images -->
+        <div class="grille-galerie">
+
+          <figure>
+            <picture>
+              <!-- source avec srcset pour les images adaptée aux grands écrans -->
+              <source srcset="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80"
+                media="(min-width: 800px)">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80"
+                alt="Chantier de béton et structure" loading="lazy">
+            </picture>
+            <!-- figcaption = description visible sous l'image -->
+            <figcaption>Chantier de béton et structure</figcaption>
+          </figure>
+
+          <!-- Les autres photos avec figure/figcaption -->
+          <!-- loading="lazy" = l'image se charge seulement quand on la voit -->
+
+          <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6BqR5W4-TDsuMvmZ8Xhnl74kndpHiXKItNg&s"
+              alt="Bâtiment en construction" loading="lazy">
+            <figcaption>Bâtiment en construction</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://c8.alamy.com/compfr/jb3djh/casque-jaune-sur-le-dessus-de-l-architecture-generique-des-plans-des-dessins-et-des-croquis-3-rouleaux-3d-render-jb3djh.jpg"
+              alt="Plans d'architecte et casque de chantier" loading="lazy">
+            <figcaption>Plans d'architecte et casque de chantier</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80"
+              alt="Bâtiment en fin de construction" loading="lazy">
+            <figcaption>Bâtiment en fin de construction</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://ma.cubic33group.com/wp-content/uploads/batiment-industriel-02-scaled-630x400.webp"
+              alt="Ouvriers sur chantier industriel" loading="lazy">
+            <figcaption>Ouvriers sur chantier industriel</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://www.metreurbtp.com/ressources/images/e8b98b46e4a6.jpg"
+              alt="Bureaux en cours de construction" loading="lazy">
+            <figcaption>Bureaux en cours de construction</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://www.buildconceptmaroc.com/imgs/actualites/big/010542_exm1.jpg"
+              alt="Architecture de grands bâtiments" loading="lazy">
+            <figcaption>Architecture de grands bâtiments</figcaption>
+          </figure>
+
+          <figure>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ3J2pepKCHHIc9UYoVn93TYs17aGIczDM9A&s"
+              alt="Bâtiment urbain contemporain" loading="lazy">
+            <figcaption>Bâtiment urbain contemporain</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="pied-page-site">
+    <div class="conteneur text-center">
+      <a href="../../index.html" class="bouton-retour">&#8592; Retour à l'accueil des TPs</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Bacodiv pour vos projets.">
+  <title>Contact - Bacodiv</title>
+  <link rel="stylesheet" href="../../css/tp3.css">
+</head>
+
+<body class="page-vitrine">
+
+  <a href="#contenu-principal" class="lien-saut-contenu">Aller au contenu</a>
+
+  <header class="entete-site">
+    <div class="conteneur">
+
+      <div class="logo-site">
+        <h1>Bacodiv</h1>
+      </div>
+
+      <nav class="navigation-principale" aria-label="Navigation principale">
+        <ul class="menu-horizontal">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html" class="lien-actif" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Contenu principal de la page -->
+  <main id="contenu-principal">
+    <section class="section-services">
+      <div class="conteneur">
+        <h2 class="titre-section text-center">Contactez-nous</h2>
+
+        <div class="contact-container">
+
+          <!-- Formulaire de contact -->
+          <div class="form-contact">
+            <h3 class="contact-sous-titre">Envoyez un message</h3>
+
+            <!-- action="#" pour aue le formulaire ne se soumet nulle part-->
+            <form action="#" method="POST">
+
+              <!-- Champ Nom -->
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" name="nom" required placeholder="Votre nom complet">
+
+              <!-- Champ Email -->
+              <label for="email">E-mail :</label>
+              <!-- type="email" pour que le navigateur vérifie le format automatiquement -->
+              <input type="email" id="email" name="email" required placeholder="vous@exemple.com">
+
+              <!-- Champ date de rendez-vous  -->
+              <label for="date-rdv">Date souhaitée de rendez-vous :</label>
+              <!-- type="date" pour afficher un calendrier -->
+              <input type="date" id="date-rdv" name="date-rdv">
+
+              <!-- Sélection du sujet avec une liste déroulante -->
+              <label for="sujet">Sujet :</label>
+              <!-- select est pour une liste déroulante avec plusieurs options -->
+              <select id="sujet" name="sujet">
+                <option value="devis">Demande de devis</option>
+                <option value="support">Support technique</option>
+                <option value="partenariat">Partenariat</option>
+                <option value="autre">Autre</option>
+              </select>
+
+              <!-- Champ message  -->
+              <label for="message">Message :</label>
+              <!-- textarea: grande zone de texte sur plusieurs lignes -->
+              <textarea id="message" name="message" rows="5" required
+                placeholder="Comment pouvons-nous vous aider ?"></textarea>
+
+              <!-- Bouton d'envoi -->
+              <button type="submit" class="bouton-primaire btn-pleine-largeur">Envoyer le message</button>
+
+            </form>
+          </div>
+
+          <!-- Infos de localisation et carte Google Maps -->
+          <div class="infos-carte">
+            <h3 class="contact-sous-titre">Nos locaux</h3>
+            <p class="contact-mb-medium"><strong>Bacodiv Siège Social</strong></p>
+            <p class="contact-mb-small">167 Hay Nahda</p>
+            <p class="contact-mb-medium">Rabat, Maroc</p>
+            <p class="contact-mb-small contact-text-small">S.A.R.L - Capital: 10 000 DHS</p>
+            <p class="contact-mb-small contact-text-small">ICE: 0015...</p>
+            <p class="contact-mb-large">&#128222; +212 6 68 83 17 30</p>
+
+            <iframe class="carte-maps" title="Carte Google Maps - Localisation Bacodiv à Rabat"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105886.602281488!2d-6.9388057288631!3d33.9693356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b871f50c5c1%3A0x7ac946ed7408076b!2sRabat%2C%20Morocco!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page  -->
+  <footer class="pied-page-site">
+    <div class="conteneur">
+
+      <div class="infos-footer text-center">
+        <h3 class="contact-mb-medium">Bacodiv</h3>
+        <p>L'innovation au service de votre réussite.</p>
+        <p>
+          <a href="../../index.html" class="bouton-retour footer-bouton-retour">
+            Retour à l'accueil des TPs
+          </a>
+        </p>
+      </div>
+
+      <div class="footer-liens-conteneur">
+
+        <!--  plan du site -->
+        <div>
+          <h4>Plan du site</h4>
+          <ul class="footer-liste-liens">
+            <li><a href="index.html" class="footer-lien">Accueil</a></li>
+            <li><a href="services.html" class="footer-lien">Services</a></li>
+            <li><a href="contact.html" class="footer-lien">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- informations légales -->
+        <div>
+          <h4>Informations</h4>
+          <ul class="footer-liste-liens">
+            <li><a href="#" class="footer-lien">Mentions légales</a></li>
+            <li><a href="#" class="footer-lien">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

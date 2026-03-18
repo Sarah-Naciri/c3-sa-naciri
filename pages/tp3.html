@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accueil du site vitrine multi-pages - Entreprise TechNova.">
+  <title>TP3 - TechNova Accueil</title>
+  <link rel="stylesheet" href="../css/tp3.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+
+<body class="page-vitrine">
+  <header class="entete-site">
+    <div class="conteneur">
+      <div class="logo-site">
+        <h1>TechNova</h1>
+      </div>
+      <nav class="navigation-principale" aria-label="Navigation principale">
+        <ul class="menu-horizontal">
+          <li><a href="index.html" class="lien-actif">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section Bannière / Hero -->
+    <section class="section-banniere">
+      <div class="conteneur">
+        <div class="contenu-banniere">
+          <h2 class="titre-banniere">Propulsez votre entreprise vers l'avenir</h2>
+          <p class="texte-banniere">TechNova est l'entreprise leader spécialisée dans les solutions numériques et la cybersécurité. Transformez vos défis en opportunités avec notre équipe d'experts.</p>
+          <a href="contact.html" class="bouton-primaire">Contactez-nous</a>
+        </div>
+        <!-- Si l'image n'existe pas, on laisse l'espace car le CSS gérera un fond abstrait -->
+        <picture class="illustration-banniere">
+          <img src="../images/ordinateur.png" alt="Illustration des solutions numériques TechNova" onerror="this.style.display='none'">
+        </picture>
+      </div>
+    </section>
+
+    <!-- Nos Services -->
+    <section class="section-services">
+      <div class="conteneur">
+        <h2 class="titre-section text-center">Nos Services Phares</h2>
+        <div class="grille-services">
+          
+          <article class="carte-service">
+            <div class="icone-service">🌐</div>
+            <h3 class="titre-service">Développement Web</h3>
+            <p class="description-service">Des applications web performantes, évolutives et adaptées à vos besoins spécifiques. Design réactif garanti.</p>
+          </article>
+          
+          <article class="carte-service">
+            <div class="icone-service">🔒</div>
+            <h3 class="titre-service">Cybersécurité</h3>
+            <p class="description-service">Audits, sécurisation de réseaux et protection de données. Nous protégeons votre infrastructure numérique.</p>
+          </article>
+          
+          <article class="carte-service">
+            <div class="icone-service">💡</div>
+            <h3 class="titre-service">Conseil Numérique</h3>
+            <p class="description-service">Accompagnement dans votre transformation digitale et optimisation de vos processus d'affaires par l'informatique.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="section-temoignages">
+      <div class="conteneur">
+        <h2 class="titre-section text-center">Ce que disent nos clients</h2>
+        <div class="grille-temoignages">
+          <blockquote class="carte-temoignage">
+            <p class="texte-temoignage">"Une équipe sérieuse et extrêmement professionnelle. Notre nouveau site web a généré 40% de trafic supplémentaire dès le premier mois. TechNova a compris notre vision !"</p>
+            <footer class="auteur-temoignage">— Jean Dupont, CEO de WebAgri</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied-page-site">
+    <div class="conteneur">
+      <div class="infos-footer">
+        <h3>TechNova</h3>
+        <p>L'innovation au service de votre réussite.</p>
+      </div>
+      <div class="liens-footer">
+        <a href="../index.html" class="bouton-retour">← Retour à l’accueil des TPs</a>
+      </div>
+      <div class="copyright-footer">
+        <p>&copy; 2026 TechNova Fictive Inc. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

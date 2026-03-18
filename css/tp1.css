@@ -1,0 +1,370 @@
+/* On importe la police Poppins depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+/* remet les marges et paddings à zéro pour tous les éléments */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* le padding ne dépasse pas la largeur de la boîte */
+}
+
+.lien-saut-contenu {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background-color: #6c5ce7;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+/* Le lien devient visible quand il reçoit le focus */
+.lien-saut-contenu:focus {
+  top: 10px;
+}
+
+/* Style général de la page du CV */
+body.page-cv {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #2d3436;
+  /* couleur du texte principal */
+  line-height: 1.6;
+  /* espace entre les lignes */
+}
+
+.conteneur {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* centrer horizontalement */
+  padding: 0 20px;
+}
+
+
+/*  EN-TÊTE DU CV */
+
+.entete-cv {
+  background-color: #6c5ce7;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px #cccccc;
+  margin-bottom: -50px;
+  padding-bottom: 80px;
+}
+
+.nom-profil {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  /* espace entre les lettres */
+}
+
+.titre-profil {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* La barre de navigation  */
+.navigation-cv {
+  margin-top: 15px;
+}
+
+/* La liste des liens de navigation  */
+.liste-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* espace entre les liens */
+  flex-wrap: wrap;
+  /* pour retourner à la ligne si écran petit */
+}
+
+/* Style de chaque lien dans le menu */
+.lien-menu {
+  color: #ffffff;
+  text-decoration: none;
+  /* pas de soulignement */
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background-color: #8a7bf0;
+  transition: background-color 0.3s;
+}
+
+/* Lorsqu'on passe la souris sur un lien du menu */
+.lien-menu:hover {
+  background-color: #ffffff;
+  color: #6c5ce7;
+}
+
+
+/* Mise en page principale */
+
+.mise-en-page-cv {
+  display: flex;
+  flex-wrap: wrap;
+  /* retour à la ligne si l'écran est petit */
+  gap: 30px;
+  /* espace entre les colonnes */
+  position: relative;
+  z-index: 10;
+  padding-bottom: 60px;
+}
+
+.colonne-laterale {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* espace entre les cartes */
+}
+
+.colonne-principale {
+  flex: 3 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+/*Cqrte de la colonne gauche*/
+
+.carte-info {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 15px #e0e0e0;
+  transition: transform 0.3s;
+}
+
+/* La carte se lève un peu quand on passe la souris dessus */
+.carte-info:hover {
+  transform: translateY(-5px);
+}
+
+/* Le conteneur de la photo de profil */
+.conteneur-photo {
+  text-align: center;
+}
+
+/* La photo de profil ronde */
+.photo-profil {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  /* rend l'image ronde */
+  object-fit: cover;
+  /* l'image remplit bien le cercle */
+  border: 5px solid #ffffff;
+  box-shadow: 0 4px 10px #cccccc;
+  margin-bottom: 15px;
+}
+
+/*  description sous la photo */
+.legende-photo {
+  font-size: 0.9rem;
+  color: #636e72;
+  font-style: italic;
+}
+
+/* Le titre des blocs */
+.titre-bloc {
+  font-size: 1.2rem;
+  color: #6c5ce7;
+  border-bottom: 2px solid #d0c8f5;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* Le bloc d'adresse/contact  */
+.coordonnees {
+  font-style: normal;
+}
+
+/* les lignes de contact */
+.ligne-contact {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ligne-contact strong {
+  color: #2d3436;
+  margin-bottom: 3px;
+}
+
+/* Les liens  */
+.lien-contact,
+.lien-reseau {
+  color: #6c5ce7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.lien-contact:hover,
+.lien-reseau:hover {
+  color: #fd79a8;
+
+}
+
+.liste-reseaux,
+.liste-simple {
+  list-style-type: none;
+}
+
+.liste-reseaux li,
+.liste-simple li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+
+/* les sections de la colone droite */
+
+.section-cv {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 4px 15px #e0e0e0;
+  transition: box-shadow 0.3s;
+}
+
+/* Ombre plus forte quand on passe la souris */
+.section-cv:hover {
+  box-shadow: 0 8px 25px #cccccc;
+}
+
+/* Les grand titres des sections */
+.titre-section {
+  font-size: 1.8rem;
+  color: #2d3436;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 6px solid #fd79a8;
+}
+
+/* Le texte contenu dans chaque section */
+.corps-section {
+  color: #636e72;
+}
+
+
+/*Section "À PROPOS"*/
+
+/* Le conteneur de la photo et du texte "à propos" */
+.alignement-apropos {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Le conteneur de la photo dans "à propos" */
+.conteneur-photo-apropos {
+  text-align: center;
+}
+
+/* Sur les petits écrans  */
+@media (max-width: 600px) {
+  .alignement-apropos {
+    flex-direction: column;
+  }
+}
+
+
+/* Tableaux */
+
+/* Le tableau  */
+.tableau-cv {
+  width: 100%;
+  border-collapse: collapse;
+  /* pas d'espace entre les cellules */
+  margin-top: 15px;
+}
+
+/* La légende/description du tableau */
+.tableau-cv caption {
+  font-style: italic;
+  color: #636e72;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Les cellules du tableau  */
+.tableau-cv th,
+.tableau-cv td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Les titres des colonnes */
+.tableau-cv th {
+  background-color: #f0edff;
+  color: #6c5ce7;
+  font-weight: 600;
+}
+
+/* La dernière ligne n'a pas de bordure en bas */
+.tableau-cv tr:last-child td {
+  border-bottom: none;
+}
+
+.tableau-cv tbody tr:hover {
+  background-color: #f9f8ff;
+}
+
+
+/*List des compétences*/
+
+.liste-competences {
+  list-style-type: disc;
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.liste-competences li {
+  color: #2d3436;
+  font-weight: 500;
+}
+
+
+/* Pied de page */
+
+.pied-page-cv {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+
+/* Le bouton "Retour" */
+.bouton-retour {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #6c5ce7;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px #e0e0e0;
+  transition: border-color 0.3s, color 0.3s;
+  border: 2px solid #e0e0e0;
+}
+
+.bouton-retour:hover {
+  border-color: #6c5ce7;
+  color: #4834d4;
+}

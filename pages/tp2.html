@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulaire d'inscription - Créer un compte utilisateur.">
+  <title>TP2 - Inscription</title>
+  <link rel="stylesheet" href="../css/tp2.css">
+  <!-- On connecte le fichier de styles CSS -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+
+<body class="page-formulaire">
+
+  <a href="#formulaire-inscription" class="lien-saut-contenu">Aller au formulaire</a>
+
+  <!-- En-tête de la page -->
+  <header class="entete-form">
+    <h1 class="titre-principal">Créer un compte</h1>
+  </header>
+
+  <!-- Contenu principal : le formulaire -->
+  <main class="contenu-principal">
+    <div class="carte-formulaire">
+
+      <!-- action="#" pour que  le formulaire ne se soumet nulle part  -->
+      <!-- method="post" pour que les données sont envoyées de façon sécurisée -->
+      <!-- enctype permet l'envoi de fichiers  -->
+      <form id="formulaire-inscription" class="formulaire-inscription" action="#" method="post"
+        enctype="multipart/form-data" novalidate>
+
+        <!--  Partie 1 : Informations personnelles-->
+        <fieldset class="groupe-champs">
+          <legend class="legende-groupe">Informations personnelles</legend>
+
+          <!-- Grille à 2 colonnes pour nom et prénom côte à côte -->
+          <div class="grille-2-colonnes">
+
+            <!-- Champ Nom -->
+            <p class="champ-formulaire">
+              <label for="nom" class="etiquette-champ">
+                Nom <span class="requis" aria-hidden="true">*</span>
+              </label>
+              <!-- required est utilisé pour les champs obligatoire -->
+              <!-- autocomplete pour aider le navigateur à remplir automatiquement -->
+              <input id="nom" name="nom" type="text" class="entree-texte" placeholder="Ex: Alaoui" required
+                autocomplete="family-name" aria-required="true">
+            </p>
+
+            <!-- Champ Prénom -->
+            <p class="champ-formulaire">
+              <label for="prenom" class="etiquette-champ">
+                Prénom <span class="requis" aria-hidden="true">*</span>
+              </label>
+              <input id="prenom" name="prenom" type="text" class="entree-texte" placeholder="Ex: Ahmed" required
+                autocomplete="given-name" aria-required="true">
+            </p>
+
+          </div>
+
+          <div class="grille-2-colonnes">
+
+            <!-- Champ Email -->
+            <p class="champ-formulaire">
+              <label for="email" class="etiquette-champ">
+                Email <span class="requis" aria-hidden="true">*</span>
+              </label>
+              <!-- type="email" = le navigateur vérifie que c'est bien un email -->
+              <input id="email" name="email" type="email" class="entree-texte" placeholder="exemple@mail.com" required
+                autocomplete="email" aria-required="true"
+                title="Veuillez entrer une adresse email valide (ex: nom@domaine.com)">
+            </p>
+
+            <!-- Champ Téléphone -->
+            <p class="champ-formulaire">
+              <label for="telephone" class="etiquette-champ">
+                Téléphone <span class="requis" aria-hidden="true">*</span>
+              </label>
+              <!-- pattern est une expression pour valider le format -->
+              <input id="telephone" name="telephone" type="tel" class="entree-texte" placeholder="Ex: 0612345678"
+                required pattern="0[67][0-9]{8}" autocomplete="tel" aria-required="true"
+                title="Format attendu : 06 ou 07 suivi de 8 chiffres (ex: 0612345678)">
+            </p>
+
+          </div>
+
+          <!-- Date de naissance -->
+          <p class="champ-formulaire">
+            <label for="naissance" class="etiquette-champ">
+              Date de naissance <span class="requis" aria-hidden="true">*</span>
+            </label>
+            <!-- type="date"pour affiche un calendrier dans le navigateur -->
+            <!-- max="2007-12-31"pour que l'utilisateur doit avoir au moins 18 ans -->
+            <input id="naissance" name="naissance" type="date" class="entree-texte" required max="2007-12-31"
+              autocomplete="bday" aria-required="true" title="Vous devez avoir au moins 18 ans pour vous inscrire">
+          </p>
+
+        </fieldset>
+
+        <!--  Partie 2 : Sécurité et préférences  -->
+        <fieldset class="groupe-champs">
+          <legend class="legende-groupe">Sécurité et préférences</legend>
+
+          <div class="grille-2-colonnes">
+
+            <!-- Champ Mot de passe -->
+            <p class="champ-formulaire">
+              <label for="motdepasse" class="etiquette-champ">
+                Mot de passe <span class="requis" aria-hidden="true">*</span>
+              </label>
+              <!-- pattern pour au moins 8 caractères, 1 majuscule et 1 chiffre -->
+              <input id="motdepasse" name="motdepasse" type="password" class="entree-texte"
+                placeholder="Min. 8 caractères, 1 Maj, 1 Chiffre" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+                autocomplete="new-password" aria-required="true"
+                title="Le mot de passe doit contenir au moins 8 caractères, une majuscule et un chiffre">
+            </p>
+
+            <!-- Champ Confirmation mot de passe -->
+            <p class="champ-formulaire">
+              <label for="confirmation" class="etiquette-champ">
+                Confirmation <span class="requis" aria-hidden="true">*</span>
+              </label>
+              <input id="confirmation" name="confirmation" type="password" class="entree-texte"
+                placeholder="Retapez votre mot de passe" required autocomplete="new-password" aria-required="true"
+                title="Retapez exactement le même mot de passe">
+            </p>
+
+          </div>
+
+          <!-- Champ Pays -->
+          <p class="champ-formulaire">
+            <label for="pays" class="etiquette-champ">
+              Pays de résidence <span class="requis" aria-hidden="true">*</span>
+            </label>
+            <!-- list="liste-pays" connecte l'input à la datalist ci-dessous -->
+            <input id="pays" name="pays" class="entree-texte" list="liste-pays" placeholder="Sélectionnez un pays"
+              required autocomplete="country-name" aria-required="true">
+            <!-- datalist c'est la  liste de suggestions pour l'input au-dessus -->
+            <datalist id="liste-pays">
+              <option value="Maroc"></option>
+              <option value="France"></option>
+              <option value="Espagne"></option>
+              <option value="Canada"></option>
+            </datalist>
+          </p>
+
+          <!-- Choix du genre avec des boutons radio -->
+          <!-- Un seul choix possible parmi les options radio -->
+          <fieldset class="champ-formulaire multi-choix">
+            <legend class="etiquette-champ pseudo-label">Genre</legend>
+            <div class="conteneur-radios">
+              <label class="etiquette-radio">
+                <input type="radio" class="entree-radio" name="genre" value="femme" required>
+                Femme
+              </label>
+              <label class="etiquette-radio">
+                <input type="radio" class="entree-radio" name="genre" value="homme">
+                Homme
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Centres d'intérêt avec des cases à cocher (Plusieurs choix possibles avec les checkboxes) -->
+          <fieldset class="champ-formulaire multi-choix">
+            <legend class="etiquette-champ pseudo-label">Centres d'intérêt</legend>
+            <div class="conteneur-checkbox">
+              <label class="etiquette-checkbox">
+                <input type="checkbox" class="entree-checkbox" name="interets" value="web">
+                Développement web
+              </label>
+              <label class="etiquette-checkbox">
+                <input type="checkbox" class="entree-checkbox" name="interets" value="cyber">
+                Cybersécurité
+              </label>
+              <label class="etiquette-checkbox">
+                <input type="checkbox" class="entree-checkbox" name="interets" value="ia">
+                Intelligence artificielle
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- zone de texte libre avec limite de caractères -->
+          <p class="champ-formulaire">
+            <label for="bio" class="etiquette-champ">Biographie (Optionnel)</label>
+            <!-- maxlength = nombre maximum de caractères autorisés -->
+            <textarea id="bio" name="bio" class="entree-texte zone-texte" maxlength="300" rows="4"
+              placeholder="Parlez-nous un peu de vous (max 300 caractères)..."></textarea>
+          </p>
+
+          <!-- Upload de photo de profil -->
+          <p class="champ-formulaire custom-file-upload">
+            <label for="photo" class="etiquette-champ">Photo de profil</label>
+            <!-- type="file" = bouton pour choisir un fichier -->
+            <!-- accept = limite aux extensions d'image acceptées -->
+            <input id="photo" name="photo" type="file" class="entree-fichier" accept=".jpg,.jpeg,.png"
+              aria-describedby="aide-photo">
+            <small id="aide-photo">Formats acceptés : JPG, JPEG, PNG</small>
+          </p>
+
+          <!-- Case à cocher pour accepter les Conditions Générales d'Utilisation -->
+          <p class="champ-formulaire conditions-utilisation">
+            <label class="etiquette-checkbox cgu-label">
+              <input type="checkbox" class="entree-checkbox" name="cgu" required aria-required="true">
+              <span class="texte-cgu">
+                J'accepte les
+                <a href="#" class="lien-cgu">conditions générales d'utilisation</a>
+                <span class="requis" aria-hidden="true">*</span>
+              </span>
+            </label>
+          </p>
+
+        </fieldset>
+
+        <!-- Bouton de soumission du formulaire -->
+        <p class="conteneur-actions">
+          <button type="submit" class="bouton-soumission">Créer mon compte</button>
+        </p>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Pied de page avec lien retour -->
+  <footer class="pied-page-form conteneur text-center">
+    <a href="../index.html" class="bouton-retour">← Retour à l'accueil des TPs</a>
+  </footer>
+
+</body>
+
+</html>
